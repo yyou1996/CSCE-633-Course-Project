@@ -163,7 +163,7 @@ def ppi_loader():
     feat_num = 50
     class_num = 121
 
-    dataset_dir = '/scratch/user/yuning.you/dataset/ppi/ppi'
+    dataset_dir = './dataset/data/ppi/ppi'
     id_map_file = dataset_dir + '/ppi-id_map.json'
     node_file = dataset_dir + '/ppi-G.json'
     A_file = dataset_dir + '/Adj_hat.npz'
@@ -208,7 +208,7 @@ def reddit_loader():
     feat_num = 100
     class_num = 41
 
-    adj, features, y_train, y_val, y_test, train_index, val_index, test_index = loadRedditFromNPZ('/scratch/user/yuning.you/dataset/reddit/reddit/')
+    adj, features, y_train, y_val, y_test, train_index, val_index, test_index = loadRedditFromNPZ('./dataset/data/reddit/reddit/')
     Adj_hat = adj + adj.T + sps.eye(node_num).tocsr()
 
     # load feature
@@ -216,7 +216,7 @@ def reddit_loader():
     normADJ = nontuple_preprocess_adj(adj)
     feat = normADJ.dot(features).todense()
 
-    dataset_dir = '/scratch/user/yuning.you/dataset/reddit/reddit'
+    dataset_dir = './dataset/data/reddit/reddit'
     id_map_file = dataset_dir + '/reddit-id_map.json'
     node_file = dataset_dir + '/reddit-G.json'
     A_file = dataset_dir + '/Adj_hat.npz'
@@ -249,7 +249,7 @@ def amazon_670k_loader():
     feat_num = 100
     class_num = 32
 
-    dataset_dir = '/scratch/user/yuning.you/dataset/amazon_670k/amazon_670k'
+    dataset_dir = './dataset/data/amazon_670k/amazon_670k'
     A_file = dataset_dir + '/Adj_hat.npz'
     feat_file = dataset_dir + '/feat_truncatedSVD.npy'
     label_file = dataset_dir + '/label.npy'
@@ -283,7 +283,7 @@ def amazon_3m_loader():
     edge_num = -1
     class_num = 38
 
-    dataset_dir = '/scratch/user/yuning.you/dataset/amazon_3m/amazon_3m'
+    dataset_dir = './dataset/data/amazon_3m/amazon_3m'
     A_file = dataset_dir + '/Adj_hat.npz'
     feat_file = dataset_dir + '/feat_truncatedSVD.npy'
     label_file = dataset_dir + '/label.npy'
