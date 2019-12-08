@@ -1,12 +1,12 @@
 # CSCE-633-Course-Project
 
-Layer-wise GCN: cd L2O-LWGCN
+Layer-wise GCN: cd ./L2O-LWGCN/
 
 python -m l2o_lwgcn.main --dataset cora --config-file cora.yaml --layer-num 2 --epoch-num 80 80
 
 python -m l2o_lwgcn.main --dataset pubmed --config-file pubmed.yaml --layer-num 2 --epoch-num 80 80
 
-Layer-wise GCN with learning to optimize controller: cd L2O-LWGCN
+Layer-wise GCN with learning to optimize controller: cd ./L2O-LWGCN/
 
 python -m l2o_lwgcn.main_l2o --dataset cora --config-file cora.yaml --layer-num 2
 
