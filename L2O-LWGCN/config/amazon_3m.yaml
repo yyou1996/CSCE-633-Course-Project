@@ -1,19 +1,19 @@
-node_num: 19717
-feat_dim: 500
-class_num: 3
+node_num: 2460406
+feat_dim: 100
+class_num: 38
 
-layer_num: 2
-hidden_dim: 16
-learning_rate: 0.001
+layer_num: 2 # 4 # 3 # 2
+hidden_dim: 128 
+learning_rate: 0.0001
 batch_size: 1024
-epoch_num: [80, 80]
+epoch_num: [80, 80, 80, 80]
 
 l2o_learning_rate: 0.05
 baseline_reward: 0.3
 total_round: 200
 sample_node_num: 1024
 stop_prob_threshold: 0.6
-controller_len: 20
+controller_len: 20 # 40 # 30 # 20
 init_round: 10 # ir*5
 decision_step: 10
 time_ratio: 0.0001

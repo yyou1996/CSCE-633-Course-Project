@@ -1,10 +1,10 @@
-node_num: 19717
-feat_dim: 500
-class_num: 3
+node_num: 643474
+feat_dim: 100
+class_num: 32
 
 layer_num: 2
-hidden_dim: 16
-learning_rate: 0.001
+hidden_dim: 128 
+learning_rate: 0.0001
 batch_size: 1024
 epoch_num: [80, 80]
 
